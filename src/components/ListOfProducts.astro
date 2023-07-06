@@ -1,0 +1,18 @@
+---
+import ProductItem from "./ProductItem.astro";
+import { products } from "../data/products"
+
+---
+
+
+<ul class="grid grid-cols-2 md:grid-cols-3 gap-3">
+    {
+        products.map(({id, title, img}) => {
+            return (
+                <li>
+                    <ProductItem id={id} title={title} img={img}/>
+                </li>
+            )
+        })
+    }
+</ul>

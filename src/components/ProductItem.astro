@@ -1,0 +1,16 @@
+---
+export interface AstroProps {
+    id: string,
+    title: string,
+    img: string
+}
+const {
+    id,
+    title,
+    img
+} = Astro.props;
+---
+
+<a class="hover:scale-105 inline-block transition-all hover:contrast-125 hover:shadow-2xl rounded-2xl bg-blue-400/20" href=`${id}`>
+    <img class="aspect-[281/336] h-full object-cover w-full max-w-full rounded" src=`${img}` alt=`Imagen del producto ${title}`>
+</a>
